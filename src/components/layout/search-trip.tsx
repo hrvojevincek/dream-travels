@@ -13,7 +13,7 @@ const SearchTrip = () => {
         <Input
           placeholder="Search trips"
           type="search"
-          className="border-none focus:outline-none focus-visible:ring-0 shadow-none"
+          className="border-none focus:outline-none focus-visible:ring-0"
         />
         <div className="rounded-full p-1">
           <Button className="rounded-full">Search</Button>
