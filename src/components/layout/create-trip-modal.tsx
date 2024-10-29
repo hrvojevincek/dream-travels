@@ -44,7 +44,7 @@ export default function Component({ isOpen, onClose }: CreateTripModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[500px] w-[650px] flex flex-col max-h-[95vh]">
+      <DialogContent className="sm:max-w-[500px] w-[650px] flex flex-col h-full sm:h-[85vh]">
         <DialogHeader>
           <DialogTitle className="text-[32px] font-normal">
             Create a trip

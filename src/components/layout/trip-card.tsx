@@ -1,11 +1,17 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import TripDetailsModal from "./trip-details-modal";
 
 export default function Component() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <Card className="flex h-[206px] overflow-hidden shadow-none">
+    <Card className="flex h-[206px] overflow-hidden shadow-none hover:shadow-md">
       <div className="relative w-1/2">
         <Image
           alt="Portugal landscape"
@@ -23,20 +29,35 @@ export default function Component() {
         </p>
         <div className="flex items-center justify-between">
           <div>
-            <Link className="underline" href="#">
+            <Link
+              className="underline"
+              href="#"
+              prefetch={false}
+              onClick={() => setIsModalOpen(true)}
+            >
               See trip details
             </Link>
           </div>
           <div className="flex items-center gap-2">
-            <Button className="underline bg-white text-base text-black shadow-none">
+            <Button
+              variant="outline"
+              className="underline bg-white text-base text-black shadow-none border-none hover:none"
+            >
               Edit
             </Button>
-            <Button className="text-red-500 text-base bg-white underline shadow-none">
+            <Button
+              variant="outline"
+              className="text-red-500 text-base bg-white underline shadow-none border-none hover:none"
+            >
               Delete
             </Button>
           </div>
         </div>
       </div>
+      <TripDetailsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </Card>
   );
 }

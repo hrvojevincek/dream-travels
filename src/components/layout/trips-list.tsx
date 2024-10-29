@@ -5,6 +5,8 @@ const TripList = () => {
   return (
     <div className="flex flex-col gap-4 mt-6">
       <TripCard />
+      <TripCard />
+      <TripCard />
     </div>
   );
 };
