@@ -60,6 +60,10 @@ export default function TripCard({ trip }: { trip: Trip }) {
         </div>
       </div>
       <TripDetailsModal
+        photo_url={trip.photo_url}
+        title={trip.title}
+        description={trip.description}
+        itinerary={trip.itinerary}
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       />

@@ -1,11 +1,11 @@
 const TimelineItem = ({
   day,
-  title,
+  location,
   description,
   isLast,
 }: {
   day: number;
-  title: string;
+  location: string;
   description: string;
   isLast: boolean;
 }) => (
@@ -19,7 +19,7 @@ const TimelineItem = ({
     {/* Right side content */}
     <div className="pb-8">
       <h3>
-        Day {day}: {title}
+        Day {day}: {location}
       </h3>
       <p className="text-[#898989]">{description}</p>
     </div>

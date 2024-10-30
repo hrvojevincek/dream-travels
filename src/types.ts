@@ -1,4 +1,4 @@
-export interface Day {
+export interface Itinerary {
   day: number;
   description: string;
   location: string;
@@ -7,7 +7,7 @@ export interface Day {
 export interface Trip {
   description: string;
   id: number;
-  itinerary: Day[];
+  itinerary: Itinerary[];
   photo_url: string;
   status: "todo" | "done";
   title: string;
